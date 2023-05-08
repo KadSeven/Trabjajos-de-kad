@@ -63,6 +63,21 @@ nav {
     transition: all ease-in-out .5s;
 }
 
+.hamburguer{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+    display: ;
+}
+
+.hamburguer>i{
+    font-size: 25px;
+
+}
+
 .titulospro {
     text-align: left;
     margin: 20px 0;
@@ -105,7 +120,7 @@ nav {
     margin: 28px 0 0 0;
     width: 150px;
     display: inline-block;
-    background-color: #ff0000;
+    background-color: #6b6868;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -116,6 +131,57 @@ nav {
     text-transform: uppercase;
     box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
 }
+/* ################### EDUCATION ###################*/
+
+.section-education{
+    background-color: #dbdbdb;
+}
+
+.section-education .title{
+    display: block;
+    margin: 15px, 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.education{
+    width: 45%;  
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.education i{
+    border: 2px solid #555050;
+    border-radius: 50%;
+    background-color: #5d6678;
+    color: #FFF;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+}
+.education a{
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+.education:hover{
+    background-color: #645c5c;
+    box-shadow: 0 0 8px gray;
+    transition: all ease-in-out .4s;
+    color: #FFF;
+}
+
+
 
 /* ################### FOOTER ###################*/
 footer {
@@ -179,5 +245,43 @@ footer {
     margin-top: 20px;
 }
 .social-media > a > i:hover{
-    background-color: #ff0000;
+    background-color: #ff000044;
+}
+
+/* ################### MEDIA QUERI ###################*/
+
+@media screen and (max-width:700px) {
+    .hamburguer{
+        display: block;
+
+    }
+    .enlaces-header{
+        position: fixed;
+        background-color: #555050;
+        top: 0;
+        right: 0;
+        width: 100ch;
+        height: 100ch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* clip-path: circle(0.5% at 0 0);; */
+    }
+    
+    .nav .enlaces-header{
+        color: #FFF;
+        background-color: #a3adc0;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 20px;
+        width: 30%;
+        text-align: center;
+    }
+
+    .nav .enlaces-headera:hover{
+        color: gray;
+        background-color: #FFF;
+    }
+
+    .nav
 }
