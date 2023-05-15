@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cambiar_fondp{
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+        }
+        #cambiar_fondo:hover{
+            background-color: aquamarine;
+            transition: all ease-in 0.6x;
+            box-shadow: 00 10px 
+        }
+    </style>
+
+</head>
+<body id="contenedor">
+    <h1>Kad</h1>
+    <input type="text" id="variable">
+    <button onclick="funcion()" id="evento">CALCULAR</button>
+    <h1 id="titulo"></h1>
+    <span id="cambiar_fondo">CAMBIAR FONDO</span>
+    <!--ARCHIVOS JAVASCRIPT-->
+        <script>
+            
+            //VARIABLES 
+            const nameuno = "Cualquier cosa texto, num, onb ,array";
+            var name_dos = "Cualquier cosa texto, num, onb ,array";
+            let nameTres = "Cualquier cosa texto, num, onb ,array";
+            alert(nameuno);
+            console.log(name_dos);
+            console.log(nameTres);
+            
+            // TIPOS DE DATOS
+            let num_a = 5; //Numero entero
+            let num_b = 10.2; //Numero decimal
+            let boolean = false; // o true
+            let stringvar = "Hola mundo soy un string";
+            let arraynum = [1,2,3,4,5,"6","7","8"]; //array numerico
+            let dias_Semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]; //array string
+            let users = [
+            //    {name:"Kevin", last_name:"Diaz", age:19}
+            //    {name:"Alejandro", last_name:"Franco", age:20}
+                {name:"Hola", last_name:"Mundo", age:100000}
+            ]; //array multidimensionales
+
+            //OPERACIONES MATEMATICAS: + - * / % ^
+            let suma = num_a + num_b;
+            let resta =num_a - num_b;
+            let multi = num_a * num_b;
+            let division = num_a / num_b;
+            let module = num_a % num_b;
+            let exponencial = num_a ^ num_b;
+            console.log("Suma: " + suma + "\nResta: " + resta);
+            let concatenar = "Suma: ".concat(suma);
+            console.log(concatenar);
+            
+            //OPERADORES DE COMPARACION: < / > / <> / <= / >= / = / == / ===
+            //OPERADORES LOGICOS: Ternario / and&& / or ||/ Negacion,diferente,contrario !
+            let varboo = true;
+            console.log(!varboo);
+            
+            //ESTRUCTURAS REPETITIVAS: IF / ELSE / ELSEIF 
+            //ESTRUCTURAS CICILICAS: FOR / WHILE / DO WHILE
+            let long = arraynum.length;
+            if(long > 7){
+                console.log(arraynum);
+                console.log(arraynum.lenght);
+                console.log(users[0].name)
+            }
+            else {
+                console.log("No ingresa");
+            }
+            for(let i=0;i<dias_Semana.length;i++){
+                console.log(dias_Semana[i]);
+            }
+            let varname = 0;
+            while(varname<users.length){
+            console.log(users[varname].name);
+            varname++;
+            }
+            
+            //FUNCIONES Y EVENTOS
+            function funcion(){
+                let variable = document.getElementById('variable').value;
+                variable = variable.toUpperCase();
+                document.getElementById("titulo").innerText = variable;
+                document.getElementById('titulo').style.color="#00FFFF";
+                console.log(variable);
+            }
+
+            document.getElementById("evento").addEventListener("click",function (){
+                let variable = document.getElementById('variable').value;
+                document.getElementById('variable').style.background="red";
+                console.log(variable);
+            })
+
+            document.getElementById("cambiar_fondo").addEventListener("click", function(){
+                document.getElementById('contenedor').style.background="gray";
+            })
+        </script>
+</body>
+</html>
